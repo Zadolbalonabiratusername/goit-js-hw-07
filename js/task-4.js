@@ -7,15 +7,17 @@ loginForm.addEventListener("submit", event => {
 		const passwordValue = event.target.elements.password.value;
 
 		if (emailValue === "" || passwordValue === "") {
-			console.log("All form fields must be filled in!");
+			alert("All form fields must be filled in!");
 		} else {
 			const userData = {};
 			userData[event.target.elements.email.name] = emailValue;
 			userData[event.target.elements.password.name] = passwordValue;
 			console.log(userData);
+			loginForm.reset();
 		}
-		
-		loginForm.reset();
 	}
 );
+
+
+
 
